@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import LogoReia from './LogoReia.png';
+import LogoReia from './images/LogoReia.png';
 import Firstpage from './components/first-page.js';
 import Secondpage from './components/second-page.js';
 
