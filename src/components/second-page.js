@@ -1,13 +1,22 @@
 import React from 'react'; 
-import Logo from './Logo.js'
+import Logo from './Logo.js';
+import Button from './Boton.js';
+import Input from './Input.js';
 
 
 const Secondpage= () => {
     return (
       <div className="Botonbox">
         <Logo />
-         <input type="text" id="codigomesero" placeholder="Ingresa tu código"></input>
-        <button type="submit" id="boton cocina">Entrar</button>
+        <br/>
+        <Input
+        id = "Input"
+        description = "Ingresa tú codigo"/>
+        <br/>
+        <Button
+        title = " Entrar "
+        id="Btn Entrar"/>
+        <br/>
       </div>
     );
   } 

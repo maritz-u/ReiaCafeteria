@@ -1,13 +1,19 @@
 import React from 'react'; 
 import Logo from './Logo.js';
+import Button from './Boton.js'
 
 const Home = () => {
     return (
-      <div className="Botonbox">
+      <div className="container">
          <Logo />
-          <button type="submit" id="boton cocina">Cocina</button>
-          <button type="submit" id="boton mesero">Mesero</button>
-  
+         <br/>
+          < Button 
+          title = "Cocina"
+          id ="Btn Cocina" />  
+          <br/>
+          < Button
+          title = "Mesero"
+          id ="Btn Mesero" /> 
       </div>
     );
   } 
