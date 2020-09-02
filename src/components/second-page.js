@@ -14,7 +14,7 @@ const Secondpage= () => {
         description = "Ingresa tú codigo"/>
         <br/>
         <Button
-        title = " Entrar "
+        title = " Entrar " 
         id="Btn Entrar"/>
         <br/>
       </div>
