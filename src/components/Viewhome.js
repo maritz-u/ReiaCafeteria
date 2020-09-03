@@ -9,11 +9,13 @@ const Home = () => {
          <br/>
           < ButtonLink 
           title = "Cocina"
-          id ="Btn Cocina" />  
+          id ="Btn Cocina"
+          pageto="Cocina"/>  
           <br/>
           < ButtonLink
           title = "Mesero"
-          id ="Btn Mesero" /> 
+          id ="Btn Mesero"
+          pageto="Mesero" /> 
       </div>
     );
   } 

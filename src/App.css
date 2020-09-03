@@ -1,6 +1,15 @@
-* {
+body {
 background-color: #066D84;
-/* background-image: url(./images/flores\ sin\ fondo.png); */
+background-image: url(./images/flores\ sin\ fondo.png); 
+
+}
+
+.container{
+    background-color: #066D84;
+    width: 80%;
+    margin-left: 10%;
+    height: 100vh;
+    text-align: center;
 
 }
 

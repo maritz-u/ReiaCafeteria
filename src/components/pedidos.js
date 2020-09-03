@@ -29,6 +29,7 @@ const Pedidos = () => {
             <ButtonLink 
                 id = "order"
                 title = "Ordenar"
+                pageto = "Cocina"
              />
         </div>
     )
