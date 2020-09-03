@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Button = (props) => {
+const ButtonLink = (props) => {
     return (
         <div className="Botonbox">
-            <button type="submit" id = {props.id}>{props.title}</button>
+            <Link to={props.title} id = {props.id}>{props.title}</Link>
         </div>
     )
 };
 
-export default Button
+export default ButtonLink

@@ -1,11 +1,12 @@
 import React from 'react'; 
+import { Link } from 'react-router-dom';
 
 const Firstpage= () => {
     return (
       <div className="Botonbox">
          
-          <button type="submit" id="boton cocina">Cocina</button>
-          <button type="submit" id="boton mesero">Mesero</button>
+          <Link to="/Cocina" id="boton cocina">Cocina</Link>
+          <Link to="/Mesero" id="boton mesero">Mesero</Link>
   
       </div>
     );

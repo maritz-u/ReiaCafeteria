@@ -1,6 +1,6 @@
 import React from 'react';
 import Logo from './Logo.js';
-import Button from './Boton.js';
+import ButtonLink from './Boton.js';
 
 const Pedidos = () => {
     return (
@@ -26,7 +26,7 @@ const Pedidos = () => {
             <div className="total pedido">
                 <p>Total</p> <p>$1.500</p>
             </div>
-            <Button 
+            <ButtonLink 
                 id = "order"
                 title = "Ordenar"
              />

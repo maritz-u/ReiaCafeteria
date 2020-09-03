@@ -1,17 +1,17 @@
 import React from 'react'; 
 import Logo from './Logo.js';
-import Button from './Boton.js'
+import ButtonLink from './Boton.js'
 
 const Home = () => {
     return (
       <div className="container">
          <Logo />
          <br/>
-          < Button 
+          < ButtonLink 
           title = "Cocina"
           id ="Btn Cocina" />  
           <br/>
-          < Button
+          < ButtonLink
           title = "Mesero"
           id ="Btn Mesero" /> 
       </div>
