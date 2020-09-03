@@ -6,7 +6,7 @@ import Input from './Input.js';
 
 const Mesero = () => {
     return (
-      <div className="Botonbox">
+      <div className="authReia">
         <Logo />
         <br/>
         <Input
