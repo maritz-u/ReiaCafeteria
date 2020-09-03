@@ -61,3 +61,37 @@ font-family: 'Montserrat', sans-serif;
     height: 10%;
     margin-top:5%;
 }
+
+/* Especificaciones navbar en página Pedidos*/
+.navbar{
+    border-style: solid;
+    border-color: #CEDABD;
+    box-sizing: border-box;
+    border-width: 5px;  
+    width:auto;
+    height: 50px;
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #CEDABD;
+   
+    display: inline-flex;
+    margin-inline-end: 13%;
+ }
+
+ .menuBox, .pedidoBox{
+   
+    border-style: solid;
+    border-color: #CEDABD;
+    box-sizing: border-box;
+    border-width: 10px;  
+    width:30%;
+    height: 40%;
+    margin-left: 30%;
+    margin-top:15%;
+    text-align: center;
+    padding:30px;
+ }   
+
+

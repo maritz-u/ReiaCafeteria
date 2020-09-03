@@ -15,11 +15,11 @@ const Pedidos = () => {
                     <a href="#/sandwich"> Sandwich </a>
                 </nav>
             </div>
-            <div className="menu Box">
+            <div className="menuBox">
                 <button> Capuchino </button> <p>$1.500</p>
                 <button> Chocolate Caliente</button> <p>$1.500</p>
             </div>
-            <div className ="pedido Box">
+            <div className ="pedidoBox">
                 <p>Capuchino </p>
                 <button>+</button>
                 <button>-</button>
