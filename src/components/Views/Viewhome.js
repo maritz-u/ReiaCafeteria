@@ -1,6 +1,6 @@
 import React from 'react'; 
-import Logo from './Logo.js';
-import ButtonLink from './Boton.js'
+import Logo from '../Elements/Logo.js';
+import ButtonLink from '../Elements/Boton.js'
 
 const Home = () => {
     return (

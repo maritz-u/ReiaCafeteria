@@ -1,6 +1,6 @@
 import React from 'react';
-import Logo from './Logo.js';
-import ContainerCocina from './Container.js';
+import Logo from '../Elements/Logo.js';
+import ContainerCocina from '../Elements/Container.js';
 
 const Cocina = () => { 
     return (
