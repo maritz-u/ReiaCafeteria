@@ -1,7 +1,7 @@
 import React from 'react';
-import Logo from './Logo.js';
-import ButtonLink from './Boton.js';
-import Input from './Input.js';
+import Logo from '../Elements/Logo.js';
+import ButtonLink from '../Elements/Boton.js';
+import Input from '../Elements/Input.js';
 
 const Pedidos = () => {
     return (

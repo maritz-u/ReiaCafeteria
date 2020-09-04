@@ -3,10 +3,10 @@ import './App.css';
 // import { BrowserRouter, Router } from 'react-router-dom';
 // import { Router, Route, BrowserHistory } from 'react-router-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/Viewhome.js';
-import Mesero from './components/Mesero.js';
-import Cocina from './components/cocina.js';
-import Pedidos from './components/pedidos.js';
+import Home from './components/Views/Viewhome.js';
+import Mesero from './components/Views/Mesero.js';
+import Cocina from './components/Views/cocina.js';
+import Pedidos from './components/Views/pedidos.js';
 
 
 function App() {
