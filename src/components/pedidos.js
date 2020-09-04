@@ -5,8 +5,8 @@ import Input from './Input.js';
 
 const Pedidos = () => {
     return (
-        <div>
-            <Logo/>
+        <div className="Orders">
+            <Logo />
             <div className="navbar">
                 <nav>
                     <a href="#/cafes"> Cafés </a>
@@ -19,7 +19,7 @@ const Pedidos = () => {
                 <button> Capuchino </button> <p>$1.500</p>
                 <button> Chocolate Caliente</button> <p>$1.500</p>
             </div>
-            <div className ="pedidoBox">
+            <div className="pedidoBox">
                 <p>Capuchino </p>
                 <button>+</button>
                 <button>-</button>
@@ -28,17 +28,18 @@ const Pedidos = () => {
                 <p>Total</p> <p>$1.500</p>
             </div>
             <div className="inputContainer">
-                <Input/>
-                <Input/>
+                <Input />
+                <Input />
             </div>
             <div className="BtnContainer">
-            <ButtonLink 
-                id = "order"
-                title = "Ordenar"
-                pageto = "Cocina"
-             />
-             </div>
+                <ButtonLink
+                    id="order"
+                    title="Ordenar"
+                    pageto="Cocina"
+                />
+            </div>
         </div>
+
     )
 }
 
