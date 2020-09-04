@@ -10,7 +10,13 @@ font-family: 'Montserrat', sans-serif;
 }
 
 /* Container de primera vista, ViewHome y de container de segunda vista Mesero */
-.container, .authReia {
+
+.BigContainer{
+  background-image: url(./images/flores\ sin\ fondo.png);
+
+}
+
+.BigContainer .container, .authReia {
     background-color: #066D84;
     width: 80%;
     margin-left: 10%;
@@ -55,6 +61,12 @@ font-family: 'Montserrat', sans-serif;
     display: flex;
 }
 
+/* Especificaciones página de Pedidos */
+
+.Orders{
+    
+
+}
 /* Especificaciones a inputs en página de Pedidos */
 .inputContainer .input{
     width:20%;
@@ -70,6 +82,7 @@ font-family: 'Montserrat', sans-serif;
     border-width: 5px;  
     width:auto;
     height: 50px;
+  
 }
 .navbar a{
     text-decoration: none;
