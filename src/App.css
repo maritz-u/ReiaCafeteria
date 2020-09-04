@@ -12,7 +12,7 @@ font-family: 'Montserrat', sans-serif;
 /* Container de primera vista, ViewHome y de container de segunda vista Mesero */
 
 .BigContainer{
-  background-image: url(./images/flores\ sin\ fondo.png);
+  background-image: url(/src/components/images/flores\ sin\ fondo.png);
 
 }
 
