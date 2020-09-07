@@ -1,5 +1,5 @@
 import React from 'react'; 
-import LogoReia from '../images/LogoReia.png';
+import LogoReia from '../../images/LogoReia.png';
 
 
 const Logo= () => {
