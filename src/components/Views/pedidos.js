@@ -2,8 +2,14 @@ import React from 'react';
 import Logo from '../Elements/Logo.js';
 import ButtonLink from '../Elements/Boton.js';
 import Input from '../Elements/Input.js';
+import data from '../../menu.json';
 
 const Pedidos = () => {
+    const menu = data;
+    console.log(menu);
+    console.log(menu.Cafés[0]);
+    console.log(menu.Pastelería);
+    
     return (
         <div className="Orders">
             <Logo />
