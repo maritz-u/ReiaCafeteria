@@ -5,7 +5,7 @@ import Input from '../Elements/Input.js';
 
 
 const Mesero = () => {
-    return (
+  return (
       <div className="BigContainer">
         <div className="authReia">
           <Logo />
@@ -17,11 +17,13 @@ const Mesero = () => {
           <ButtonLink
             title="Entrar"
             id="Btn Entrar"
-            pageto="Pedidos" />
+            pageto="Pedidos"/>
           <br />
         </div>
       </div>
     );
-  } 
+  }   
   
   export default Mesero; 
+
+

@@ -5,8 +5,8 @@ font-family: 'Montserrat', sans-serif;
 
 }
 
-.logo{
-    align-items: center;
+.App-header{
+    text-align: center;
 }
 
 /* Container de primera vista, ViewHome y de container de segunda vista Mesero */
@@ -33,8 +33,7 @@ font-family: 'Montserrat', sans-serif;
     border-width: 10px;  
     width:30%;
     height: 15%;
-    margin-left: 30%;
-    margin-top:15%;
+    margin:15% auto;
     text-align: center;
     padding:30px;
     
@@ -76,35 +75,62 @@ font-family: 'Montserrat', sans-serif;
 
 /* Especificaciones navbar en página Pedidos*/
 .navbar{
+
     border-style: solid;
     border-color: #CEDABD;
     box-sizing: border-box;
     border-width: 5px;  
+    border-left: none;
+    border-right: none;
     width:auto;
     height: 50px;
-  
+      
 }
+
+.navbar nav{
+ display: flex;
+}
+
+
 .navbar a{
     text-decoration: none;
     font-size: 25px;
     color: #CEDABD;
    
-    display: inline-flex;
-    margin-inline-end: 13%;
+   flex: 1;
+text-align: center;
+margin: 0 40px;
  }
 
+.BoxContainer{
+  display: flex;
+  margin: 15px auto;
+
+}
+
+.ColumnContainer{
+    display: flex;
+    flex: 1;
+    margin: 15px auto;
+    flex-flow: column;
+}
+
+
  .menuBox, .pedidoBox{
-   
+    flex: 1;   
     border-style: solid;
     border-color: #CEDABD;
     box-sizing: border-box;
     border-width: 10px;  
-    width:30%;
+    width: 45%;
     height: 40%;
-    margin-left: 30%;
-    margin-top:15%;
     text-align: center;
     padding:30px;
+    margin: 15px;
  }   
 
 
+.Total, .inputContainer, .BtnContainer {
+flex: 1;
+
+}
