@@ -4,7 +4,11 @@ import ButtonLink from '../Elements/Boton.js';
 import Input from '../Elements/Input.js';
 import react, { useEffect, useState } from "react"; 
 
-function useListaProductos() {
+
+
+export default function ListaProductos () { 
+
+  function useListaProductos() {
     
     const [menu , setMenu] = useState ({"Té":[]})
 
@@ -18,11 +22,32 @@ function useListaProductos() {
     }, [])
 
     return menu
-}
+};
 
-export default function ListaProductos () { 
-    const menu = useListaProductos()
+const menu = useListaProductos();
+const arraymenu = Array.from(menu);
+// const Arraymenu= menu();
 
+const cafes = arraymenu.filter(function(arraymenu){
+  return arraymenu.tipo ==="Cafés";
+}); 
+ console.log(cafes);
+
+const te = arraymenu.filter(function(arraymenu){
+  return arraymenu.tipo ==="Té";
+}); 
+console.log(te);
+
+const pasteleria = arraymenu.filter(function(arraymenu){
+  return arraymenu.tipo ==="Pastelería";
+}); 
+console.log(pasteleria);
+
+const sandwich = arraymenu.filter(function(arraymenu){
+  return arraymenu.tipo ==="Sandwich";
+}); 
+console.log(sandwich);
+    
      return (
        <div className="Orders">
          <Logo />
@@ -34,18 +59,14 @@ export default function ListaProductos () {
              <a href="#/sandwich"> Sandwich </a>
            </nav>
          </div>
-
-         {menu["Té"].map((item) => (
-           <li key={item.ListaProductos}>
-             <button>{item.nombre}</button>
-                     {item.valor}
-           </li>
-         ))}
-
          <div className="BoxContainer">
            <div className="menuBox">
-             <button> Capuchino </button> <p>$1.500</p>
-             <button> Chocolate Caliente</button> <p>$1.500</p>
+             {sandwich.map((item) => (
+               <li key={item.ListaProductos}>
+                 <button>{item.nombre}</button>
+                 {item.valor}
+               </li>
+             ))}
            </div>
 
            <div className="pedidoBox">
