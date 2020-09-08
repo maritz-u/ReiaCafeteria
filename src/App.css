@@ -2,7 +2,10 @@ body {
 background-color: #066D84;
 /* background-image: url(./images/flores\ sin\ fondo.png);  */
 font-family: 'Montserrat', sans-serif;
+}
 
+p{
+   color:  #CEDABD; 
 }
 
 .App-header{
@@ -62,10 +65,6 @@ font-family: 'Montserrat', sans-serif;
 
 /* Especificaciones página de Pedidos */
 
-.Orders{
-    
-
-}
 /* Especificaciones a inputs en página de Pedidos */
 .inputContainer .input{
     width:20%;
@@ -133,4 +132,20 @@ margin: 0 40px;
 .Total, .inputContainer, .BtnContainer {
 flex: 1;
 
+}
+
+.btnoption {
+    border: none;
+    background-color: transparent;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-family:'Montserrat', sans-serif;
+    color:  #CEDABD;
+    cursor: pointer;
+    display: inline-flexbox;
+}
+  
+.btnoption:hover {
+    color:#E7AF3E;
+    border: none;
 }

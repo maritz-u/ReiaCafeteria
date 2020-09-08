@@ -65,7 +65,7 @@ const Pedidos = () => {
         <div className="menuBox">
           {opciones.map((data, index) => {
             return <div key={index}>
-              <h3>{data.nombre}</h3>
+              <button type="submit" className="btnoption">{data.nombre}</button>
               <p>{data.valor}</p>
             </div>
           })}
