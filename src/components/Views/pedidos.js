@@ -1,93 +1,99 @@
-import React from 'react';
 import Logo from '../Elements/Logo.js';
 import ButtonLink from '../Elements/Boton.js';
 import Input from '../Elements/Input.js';
-import react, { useEffect, useState } from "react"; 
+import React, { useEffect, useState } from "react";
 
 
 
-export default function ListaProductos () { 
+const Pedidos = () => {
 
-  function useListaProductos() {
-    
-    const [menu , setMenu] = useState ({"Té":[]})
-
+  /* Función para traer archivo JSON*/
+  function ListaProductos() {
+    const [menu, setMenu] = useState({ "Té": [] })
     useEffect(() => {
-        fetch("Json/menu.json")
+      fetch("Json/menu.json")
         .then(Response => Response.json())
         .then(data => {
-            console.log(data)
-            setMenu(data)
+          console.log(data)
+          setMenu(data)
         })
     }, [])
 
     return menu
-};
+  };
 
-const menu = useListaProductos();
-const arraymenu = Array.from(menu);
-// const Arraymenu= menu();
+  /* Función para crear arrays de archivo JSON */
+  const menu = ListaProductos();
+  const arraymenu = Array.from(menu);
 
-const cafes = arraymenu.filter(function(arraymenu){
-  return arraymenu.tipo ==="Cafés";
-}); 
- console.log(cafes);
+  const cafes = arraymenu.filter(function (arraymenu) {
+    return arraymenu.tipo === "Cafés";
+  });
+  // console.log(cafes);
 
-const te = arraymenu.filter(function(arraymenu){
-  return arraymenu.tipo ==="Té";
-}); 
-console.log(te);
+  const te = arraymenu.filter(function (arraymenu) {
+    return arraymenu.tipo === "Té";
+  });
+  // console.log(te);
 
-const pasteleria = arraymenu.filter(function(arraymenu){
-  return arraymenu.tipo ==="Pastelería";
-}); 
-console.log(pasteleria);
+  const pasteleria = arraymenu.filter(function (arraymenu) {
+    return arraymenu.tipo === "Pastelería";
+  });
+  // console.log(pasteleria);
 
-const sandwich = arraymenu.filter(function(arraymenu){
-  return arraymenu.tipo ==="Sandwich";
-}); 
-console.log(sandwich);
-    
-     return (
-       <div className="Orders">
-         <Logo />
-         <div className="navbar">
-           <nav>
-             <a href="#/cafes"> Cafés </a>
-             <a href="#/pasteleria"> Pasteleria </a>
-             <a href="#/te"> Té </a>
-             <a href="#/sandwich"> Sandwich </a>
-           </nav>
-         </div>
-         <div className="BoxContainer">
-           <div className="menuBox">
-               {sandwich.map((data, index)=>{
-                   return <div> <h3>{data.nombre}</h3>
-                   <p>{data.valor}</p></div>
-               })}
-           </div>
+  const sandwich = arraymenu.filter(function (arraymenu) {
+    return arraymenu.tipo === "Sandwich";
+  });
+  // console.log(sandwich);
 
-           <div className="pedidoBox">
-             <p>Capuchino </p>
-             <button>+</button>
-             <button>-</button>
-           </div>
-         </div>
+  /* Constante para que cuando aprieten un link del navbar aparezca información */
+  /* Estado de selecciones vacios, setOpciones es la función que va a pushear a opciones */
+  const [opciones, setOpciones] = useState([]);
 
-         <div className="BoxContainer">
-             <div className="ColumnContainer">
-           <div className="Total">
-             <p>Total</p> <p>$1.500</p>
-           </div>
-           <div className="inputContainer">
-             <Input />
-             <Input />
-           </div>
-           </div>
-           <div className="BtnContainer">
-             <ButtonLink id="order" title="Ordenar" pageto="Cocina" />
-           </div>
-         </div>
-       </div>
-     );
-  }
+  return (
+    <div className="Orders">
+      <Logo />
+      <div className="navbar">
+        <nav>
+          <a href="#/cafes" id="cafe" value="cafes" onClick={() => setOpciones(cafes)}> Cafés </a>
+          <a href="#/pasteleria" id="pasteleria" value="pasteleria" onClick={() => setOpciones(pasteleria)}> Pasteleria </a>
+          <a href="#/te" id="te" value="te" onClick={() => setOpciones(te)}> Té </a>
+          <a href="#/sandwich" id="sandwich" value="sandwich" onClick={() => setOpciones(sandwich)}> Sandwich </a>
+        </nav>
+      </div>
+      <div className="BoxContainer">
+        <div className="menuBox">
+          {opciones.map((data, index) => {
+            return <div key={index}>
+              <h3>{data.nombre}</h3>
+              <p>{data.valor}</p>
+            </div>
+          })}
+        </div>
+
+        <div className="pedidoBox">
+          <p>Capuchino </p>
+          <button>+</button>
+          <button>-</button>
+        </div>
+      </div>
+
+      <div className="BoxContainer">
+        <div className="ColumnContainer">
+          <div className="Total">
+            <p>Total</p> <p>$1.500</p>
+          </div>
+          <div className="inputContainer">
+            <Input />
+            <Input />
+          </div>
+        </div>
+        <div className="BtnContainer">
+          <ButtonLink id="order" title="Ordenar" pageto="Cocina" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Pedidos; 
