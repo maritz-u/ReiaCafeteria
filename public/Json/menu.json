@@ -1,103 +1,122 @@
     [
-            {   "tipo": "Cafés",
-                "nombre": "Latte",
-                "valor": "$2990"
-            },
-            {    
-                "tipo": "Cafés",
-                "nombre": "Capuchino",
-                "valor": "$2990"
-            },
-            {   
-                "tipo": "Cafés",
-                "nombre": "Mokachino",
-                "valor": "$2990"
-            },
-            {   "tipo": "Cafés",
-                "nombre": "Chocolate caliente",
-                "valor": "$3490"
-            },
-            {    "tipo": "Cafés",
-                "nombre": "Expresso",
-                "valor": "$1990"
-            },
-            {"tipo": "Cafés",
-                "nombre": "Americano",
-                "valor": "$1990"
-            },
-        
-            {   "tipo":"Pastelería",
-                "nombre": "Pie de Limón",
-                "valor": "$2990"
-            },
-            {"tipo":"Pastelería",
-                "nombre": "Muffin",
-                "valor": "$1990"
-            },
-            {"tipo":"Pastelería",
-                "nombre": "Torta trufa",
-                "valor": "$3690"
-            },
-            {"tipo":"Pastelería",
-                "nombre": "Panqueque",
-                "valor": "$2990"
-            },
-            {"tipo":"Pastelería",
-                "nombre": "Berlín",
-                "valor": "$1990"
-            },
-            {"tipo":"Pastelería",
-                "nombre": "Paquete de galletas",
-                "valor": "$3290"
-            },
-        
-            {   "tipo":"Té",
-                "nombre": "Earl Grey",
-                "valor": "$2490"
-            },
-            {"tipo":"Té",
-                "nombre": "Té helado",
-                "valor": "$2690"
-            },
-            {"tipo":"Té",
-                "nombre": "Té limón jengibre",
-                "valor": "$2690"
-            },
-            {"tipo":"Té",
-                "nombre": "Té verde",
-                "valor": "$2490"
-            },
-            {"tipo":"Té",
-                "nombre": "Té negro",
-                "valor": "$2490"
-            },
-            {"tipo":"Té",
-                "nombre": "Infusión Herbal",
-                "valor": "$1990"
-            },
-            
-            {    "tipo":"Sandwich",
-                "nombre": "Ave Mayo",
-                "valor": "$3690"
-            },
-            {"tipo":"Sandwich",
-                "nombre": "Ave palta",
-                "valor": "$4990"
-            },
-            {"tipo":"Sandwich",
-                "nombre": "Sandwich de vegetales",
-                "valor": "$4990"
-            },
-            {"tipo":"Sandwich",
-                "nombre": "Croissant Aliado",
-                "valor": "$3690"
-            },
-            {"tipo":"Sandwich",
-                "nombre": "Tostadas a la sureña",
-                "valor": "$2990"
-            },
-            {"tipo":"Sandwich",
-                "nombre": "Paila de huevos",
-                "valor": "$2990"
-            }
+        {
+            "tipo": "Cafés",
+            "nombre": "Latte",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Cafés",
+            "nombre": "Capuchino",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Cafés",
+            "nombre": "Mokachino",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Cafés",
+            "nombre": "Chocolate caliente",
+            "valor": "3490"
+        },
+        {
+            "tipo": "Cafés",
+            "nombre": "Expresso",
+            "valor": "1990"
+        },
+        {
+            "tipo": "Cafés",
+            "nombre": "Americano",
+            "valor": "1990"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Pie de Limón",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Muffin",
+            "valor": "1990"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Torta trufa",
+            "valor": "3690"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Panqueque",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Berlín",
+            "valor": "1990"
+        },
+        {
+            "tipo": "Pastelería",
+            "nombre": "Paquete de galletas",
+            "valor": "3290"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Earl Grey",
+            "valor": "2490"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Té helado",
+            "valor": "2690"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Té limón jengibre",
+            "valor": "2690"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Té verde",
+            "valor": "2490"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Té negro",
+            "valor": "2490"
+        },
+        {
+            "tipo": "Té",
+            "nombre": "Infusión Herbal",
+            "valor": "1990"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Ave Mayo",
+            "valor": "3690"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Ave palta",
+            "valor": "4990"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Sandwich de vegetales",
+            "valor": "4990"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Croissant Aliado",
+            "valor": "3690"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Tostadas a la sureña",
+            "valor": "2990"
+        },
+        {
+            "tipo": "Sandwich",
+            "nombre": "Paila de huevos",
+            "valor": "2990"
+        }
     ]
