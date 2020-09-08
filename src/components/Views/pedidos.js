@@ -61,12 +61,10 @@ console.log(sandwich);
          </div>
          <div className="BoxContainer">
            <div className="menuBox">
-             {sandwich.map((item) => (
-               <li key={item.ListaProductos}>
-                 <button>{item.nombre}</button>
-                 {item.valor}
-               </li>
-             ))}
+               {sandwich.map((data, index)=>{
+                   return <div> <h3>{data.nombre}</h3>
+                   <p>{data.valor}</p></div>
+               })}
            </div>
 
            <div className="pedidoBox">
