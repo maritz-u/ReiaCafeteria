@@ -1,9 +1,12 @@
 import Logo from '../Elements/Logo.js';
-import ButtonLink from '../Elements/Boton.js';
+// import ButtonLink from '../Elements/Boton.js';
 import Input from '../Elements/Input.js';
 import React, { useEffect, useState } from "react";
+import db from '../../firebase.js';
+import { Link } from 'react-router-dom';
 
 
+const initialOrder = [];
 
 const Pedidos = () => {
 
@@ -49,15 +52,9 @@ const Pedidos = () => {
   /* Constante para que cuando aprieten un link del navbar aparezca información */
   /* Estado de selecciones vacios, setOpciones es la función que va a pushear a opciones */
   const [opciones, setOpciones] = useState([]);
-  /* Para capturar información de btones */
+  
   /* Constante que se va a crear para manejar la orden  */
-  // const initialOrder = () => {
-  //   name = " ",
-  //   value = " "
-  // };
-  // const initialOrder = [];
-
-  const [order] = useState([]);
+  const [order, setOrder] = useState([]);
   /* Para manejar click de cada opción */
   const handleClick = (e) => {
     // console.log(e.target.name);
@@ -66,9 +63,33 @@ const Pedidos = () => {
     const orderValue = e.target.value;
     // console.log(orderName);
     // console.log(orderValue);
-   order.push({"name" : orderName, "value" : orderValue});
+   initialOrder.push({"name" : orderName, "value" : orderValue});
+    setOrder(initialOrder);
     console.log(order);
   };
+
+  /* Para agregar colección a firebase */
+  const addOrder = () => {
+    console.log('estoy escuchando');
+    let nombre = [];
+    let precio = [];
+    initialOrder.map((data) => {
+      nombre.push(data.name);
+      precio.push(data.value);
+    });
+    
+    db.collection('pedido').add({
+      name: nombre,
+      precio: precio,
+    })
+    .then((docRef) =>{
+      console.log('nuevo pedido agregado')
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  };
+
 
 
   return (
@@ -92,7 +113,6 @@ const Pedidos = () => {
           })}
         </div>
         <div className="pedidoBox">
-          {/* FUNCIÓN DE FIREBASE!!! */}
           {order.map((data, index) => {
             return <div key={index}>
                 <p>{data.name}</p>
@@ -115,7 +135,7 @@ const Pedidos = () => {
           </div>
         </div>
         <div className="BtnContainer">
-          <ButtonLink id="order" title="Ordenar" pageto="Cocina" />
+          <Link to="Cocina" id="order" title="Ordenar"  onClick={()=>addOrder()}>ORDENAR</Link> 
         </div>
       </div>
     </div>
