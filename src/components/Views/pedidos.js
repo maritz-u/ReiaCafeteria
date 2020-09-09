@@ -57,7 +57,7 @@ const Pedidos = () => {
   // };
   // const initialOrder = [];
 
-  const [order, setOrder] = useState([]);
+  const [order] = useState([]);
   /* Para manejar click de cada opción */
   const handleClick = (e) => {
     // console.log(e.target.name);
@@ -93,6 +93,12 @@ const Pedidos = () => {
         </div>
         <div className="pedidoBox">
           {/* FUNCIÓN DE FIREBASE!!! */}
+          {order.map((data, index) => {
+            return <div key={index}>
+                <p>{data.name}</p>
+              <p>{data.value}</p>
+            </div>
+          })}
 
         <button>+</button> <button>-</button>
         </div>
