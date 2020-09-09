@@ -134,8 +134,8 @@ const Pedidos = () => {
             <Input />
           </div>
         </div>
-        <div className="BtnContainer">
-          <Link to="Cocina" id="order" title="Ordenar"  onClick={()=>addOrder()}>ORDENAR</Link> 
+        <div className="Botonbox">
+          <Link to="Cocina" className="Link" id="order" title="Ordenar"  onClick={()=>addOrder()}>Ordenar</Link> 
         </div>
       </div>
     </div>
