@@ -51,13 +51,13 @@ const Pedidos = () => {
   const [opciones, setOpciones] = useState([]);
   /* Para capturar información de btones */
   /* Constante que se va a crear para manejar la orden  */
-  // const initialOrder = {
-  //   "name": " ",
-  //   "value": " ",
+  // const initialOrder = () => {
+  //   name = " ",
+  //   value = " "
   // };
-  const initialOrder = [];
+  // const initialOrder = [];
 
-  // const [order, setOrder] = useState(initialOrder);
+  const [order, setOrder] = useState([]);
   /* Para manejar click de cada opción */
   const handleClick = (e) => {
     // console.log(e.target.name);
@@ -66,8 +66,8 @@ const Pedidos = () => {
     const orderValue = e.target.value;
     // console.log(orderName);
     // console.log(orderValue);
-   initialOrder.push({"name" : orderName, "value" : orderValue});
-    console.log(initialOrder);
+   order.push({"name" : orderName, "value" : orderValue});
+    console.log(order);
   };
 
 
