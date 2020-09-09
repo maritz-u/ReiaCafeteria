@@ -49,6 +49,27 @@ const Pedidos = () => {
   /* Constante para que cuando aprieten un link del navbar aparezca información */
   /* Estado de selecciones vacios, setOpciones es la función que va a pushear a opciones */
   const [opciones, setOpciones] = useState([]);
+  /* Para capturar información de btones */
+  /* Constante que se va a crear para manejar la orden  */
+  // const initialOrder = () => {
+  //   name = " ",
+  //   value = " "
+  // };
+  // const initialOrder = [];
+
+  const [order, setOrder] = useState([]);
+  /* Para manejar click de cada opción */
+  const handleClick = (e) => {
+    // console.log(e.target.name);
+    // console.log(e.target.value);
+    const orderName = e.target.name;
+    const orderValue = e.target.value;
+    // console.log(orderName);
+    // console.log(orderValue);
+   order.push({"name" : orderName, "value" : orderValue});
+    console.log(order);
+  };
+
 
   return (
     <div className="Orders">
@@ -65,16 +86,15 @@ const Pedidos = () => {
         <div className="menuBox">
           {opciones.map((data, index) => {
             return <div key={index}>
-              <button type="submit" className="btnoption">{data.nombre}</button>
+              <button className="btnoption" onClick={handleClick} name={data.nombre} value={data.valor}>{data.nombre}</button>
               <p>{data.valor}</p>
             </div>
           })}
         </div>
-
         <div className="pedidoBox">
-          <p>Capuchino </p>
-          <button>+</button>
-          <button>-</button>
+          {/* FUNCIÓN DE FIREBASE!!! */}
+
+        <button>+</button> <button>-</button>
         </div>
       </div>
 
