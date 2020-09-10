@@ -5,8 +5,10 @@ import React, { useEffect, useState } from "react";
 import db from '../../firebase.js';
 import { Link } from 'react-router-dom';
 
-
+/* Constante global para creación de pedido */ 
 const initialOrder = [];
+/* Constante global para cliente y mesa de pedido */
+const initialTable = [];
 
 const Pedidos = () => {
 
@@ -53,11 +55,11 @@ const Pedidos = () => {
   /* Estado de selecciones vacios, setOpciones es la función que va a pushear a opciones */
   const [opciones, setOpciones] = useState([]);
   
-  /* Constante que se va a crear para manejar la orden  */
+  /* Constante que se va a crear para manejar el pedido*/
   const [order, setOrder] = useState([]);
   /* Para manejar click de cada opción */
   const handleClick = (e) => {
-    // console.log(e.target.name);
+    console.log(e.target.name);
     // console.log(e.target.value);
     const orderName = e.target.name;
     const orderValue = e.target.value;
@@ -67,6 +69,19 @@ const Pedidos = () => {
     setOrder(initialOrder);
     console.log(order);
   };
+
+  /* Constante que se va a crear para manejar la mesa y el nombre del cliente */
+    const [table, setTable] = useState([]);
+/* Para obtener información de los input */
+  const inputMesa = (e) =>{
+    // console.log(e.target.value);
+    const numberMesa = e.target.value;
+    // console.log(clienteMesa);
+    initialTable.push({"mesa":numberMesa});
+    setTable(initialTable);
+    console.log(table);
+  }
+
 
   /* Para agregar colección a firebase */
   const addOrder = () => {
@@ -130,9 +145,18 @@ const Pedidos = () => {
             <p>Total</p> <p>$1.500</p>
           </div>
           <div className="inputContainer">
-            <Input />
-            <Input />
-          </div>
+          <Input
+            id="Mesa"
+            description="Número Mesa"
+            onChange={inputMesa} />
+            <Input
+            id="Cliente"
+            description="Nombre Cliente"
+            // onChange={handleInput} 
+            />
+            <input type="number" name="" id=""/>
+            
+          </div>hnnnnjghb
         </div>
         <div className="Botonbox">
           <Link to="Cocina" className="Link" id="order" title="Ordenar"  onClick={()=>addOrder()}>Ordenar</Link> 
