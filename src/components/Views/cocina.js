@@ -8,9 +8,9 @@ const Cocina = () => {
             <Logo />
             <div className="contenedorCocina">
                  <ContainerCocina />
+                 {/* <ContainerCocina />
                  <ContainerCocina />
-                 <ContainerCocina />
-                 <ContainerCocina />
+                 <ContainerCocina /> */}
                 {/* <div className="half">
                     <ContainerCocina />
                     <button className="botonEntrega">Entregar</button>
