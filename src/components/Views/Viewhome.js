@@ -11,7 +11,7 @@ const Home = () => {
           <ButtonLink
             title="Cocina"
             id="Btn Cocina"
-            pageto="Mesero" />
+            pageto="Cocina" />
           <br />
           <ButtonLink
             title="Mesero"
