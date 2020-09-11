@@ -71,8 +71,10 @@ const Pedidos = () => {
   const inputMesa = (e) => {
     // console.log(e.target.value);
     const numberMesa = e.target.value;
-    // console.log(clienteMesa);
-    initialTable.push({ "mesa": numberMesa });
+    // console.log(numberMesa);
+    // const {id, value} = e.target
+    // console.log(id,value);
+    initialTable.push(numberMesa);
     setTable(initialTable);
     console.log(table);
   }
@@ -81,14 +83,19 @@ const Pedidos = () => {
   /* Para agregar colección a firebase */
   const addOrder = () => {
     console.log('estoy escuchando');
+    let mesa = [];
     let nombre = [];
     let precio = [];
     initialOrder.map((data) => {
       nombre.push(data.name);
       precio.push(data.value);
     });
+    initialTable.map((data)=>{
+      mesa.push(data);
+    });
 
     db.collection('pedido').add({
+      mesa : mesa,
       name: nombre,
       precio: precio,
     })
@@ -134,9 +141,9 @@ const Pedidos = () => {
             </div>
           })}
 
-          <div className="lineaInformacionPedido">
+          {/* <div className="lineaInformacionPedido">
             <button className="aumentarPedido">+</button><div className="numeroPedido"></div><button className="disminuirPedido">-</button>
-          </div>
+          </div> */}
           <p className="total">Total $</p>
         </div>
       </div>
