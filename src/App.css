@@ -1,31 +1,63 @@
 body {
-background-color: #066D84;
-/* background-image: url(./images/flores\ sin\ fondo.png);  */
-font-family: 'Montserrat', sans-serif;
+    background-color: #066D84;
+    /* background-image: url(./images/flores\ sin\ fondo.png);  */
+    font-family: 'Montserrat', sans-serif;
 }
 
-p{
-   color:  #CEDABD; 
+p {
+    color: #CEDABD;
 }
 
-.App-header{
+.App-header {
     text-align: center;
 }
 
 /* Container de primera vista, ViewHome y de container de segunda vista Mesero */
 
-.BigContainer{
-  background-image: url(./images/flores\ sin\ fondo.png);
+.BigContainer {
+    background-image: url(./images/flores\ sin\ fondo.png);
 
 }
 
-.BigContainer .container, .authReia {
+.BigContainer .container,
+.authReia {
     background-color: #066D84;
     width: 80%;
-    margin-left: 10%;
+    margin: 0 auto;
     height: 100vh;
     text-align: center;
 
+}
+
+/** Pagina home **/
+.contenedorBotonesHome {
+    margin-left: 10vh;
+    margin-right: 10vh;
+    margin-top: 35%;
+    margin-bottom: 25%;
+}
+
+.contenedorBotonesHome .Botonbox {
+    margin-top: 5vh;
+}
+
+/** Pagina mesero **/
+.contenedorPaginaMesero {
+    position: relative;
+    width: 75%;
+    margin: 25vh auto;
+}
+
+.contenedorPaginaMesero .Botonbox {
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: auto;
+}
+
+.contenedorPaginaMesero .input {
+    width: 100%;
+    padding: 30px 0;
 }
 
 /* Componente Bton */
@@ -33,120 +65,171 @@ p{
     border-style: solid;
     border-color: #CEDABD;
     box-sizing: border-box;
-    border-width: 10px;  
-    width:30%;
-    height: 10%;
-    margin:15% auto;
+    border-width: 10px;
     text-align: center;
-    padding:30px;
-    
+    padding: 20px;
 }
 
 .Botonbox .Link {
     text-decoration: none;
     font-size: 30px;
     color: #CEDABD;
-
 }
 
 
 /* Componente Input */
 
-.input{
-    border:0;
-    width:40%;
+.input {
+    border: 10px solid #CEDABD;
+    background-color: rgba(206, 218, 189, 0.5);
+    box-sizing: border-box;
+    color: #FFF;
+    font-size: 1.6rem;
+    width: 100%;
     height: 15%;
-    margin-left: 30%;
-    margin-top:25%;
+    margin-bottom: 5%;
     text-align: center;
-    padding:30px;
+    padding: 25px 0;
     display: flex;
+}
+
+.input::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    color: #FFF;
 }
 
 /* Especificaciones página de Pedidos */
 
-/* Especificaciones a inputs en página de Pedidos */
-.inputContainer .input{
-    width:20%;
-    height: 10%;
-    margin-top:5%;
-}
-
 /* Especificaciones navbar en página Pedidos*/
-.navbar{
+.navbar {
 
     border-style: solid;
     border-color: #CEDABD;
     box-sizing: border-box;
-    border-width: 5px;  
+    border-width: 5px;
     border-left: none;
     border-right: none;
-    width:auto;
+    width: auto;
     height: 50px;
-      
+
 }
 
-.navbar nav{
- display: flex;
+.navbar nav {
+    display: flex;
 }
 
 
-.navbar a{
+.navbar a {
     text-decoration: none;
     font-size: 25px;
     color: #CEDABD;
-   
-   flex: 1;
-text-align: center;
-margin: 0 40px;
- }
 
-.BoxContainer{
-  display: flex;
-  margin: 15px auto;
+    flex: 1;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.BoxContainer {
+    display: flex;
+    margin: 15px auto;
 
 }
 
-.ColumnContainer{
+.ColumnContainer {
     display: flex;
     flex: 1;
-    margin: 15px auto;
-    flex-flow: column;
-    margin-top: 45%;
-}
-
-
- .menuBox, .pedidoBox{
-    flex: 1;   
-    border-style: solid;
-    border-color: #CEDABD;
-    box-sizing: border-box;
-    border-width: 10px;  
-    width: 45%;
-    height: 40%;
-    text-align: center;
-    padding:30px;
     margin: 15px;
- }   
-
-
-.Total, .inputContainer, .BtnContainer {
-flex: 1;
-
+    flex-flow: column;
 }
 
-.btnoption {
+.menuBox,
+.pedidoBox {
+    flex: 1;
+    border: 10px solid #CEDABD;
+    box-sizing: border-box;
+    width: 45%;
+    min-height: 40vh;
+    padding: 40px 0;
+    margin: 15px;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.total {
+    position: absolute;
+    font-size: 1.6rem;
+    text-align: right;
+    bottom: 0;
+    right: 10px;
+}
+
+.menuBox td {
     border: none;
     background-color: transparent;
     padding: 14px 28px;
-    font-size: 16px;
-    font-family:'Montserrat', sans-serif;
-    color:  #CEDABD;
+    color: #CEDABD;
     cursor: pointer;
-    display: inline-flexbox;
 }
-  
-.btnoption:hover {
-    color:#E7AF3E;
+
+.menuBox td:hover {
+    color: #E7AF3E;
     border: none;
+}
+
+.lineaInformacionPedido {
+    display: flex;
+}
+
+.lineaInformacionPedido .numeroPedido {
+    flex: 1;
+    width: 1em;
+    height: 1em;
+    max-width: 1em;
+    font-size: 2rem;
+    background: #CEDABD;
+}
+
+.lineaInformacionPedido .aumentarPedido,
+.lineaInformacionPedido .disminuirPedido {
+    flex: 1;
+    width: 1em;
+    height: 1em;
+    max-width: 1em;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #E7AF3E;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/** Pagina cocina **/
+.contenedorCocina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.contenedorCocina>div {
+    border: 10px solid #CEDABD;
+    box-sizing: border-box;
+    width: 40vw;
+    min-height: 35vh;
+    padding: 1vh 1vw;
+    margin: 1em;
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.botonEntrega {
+    background-color: #E7AF3E;
+    color: #FFF;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    padding: 5px 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

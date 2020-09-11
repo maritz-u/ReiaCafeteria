@@ -9,21 +9,21 @@ const Mesero = () => {
       <div className="BigContainer">
         <div className="authReia">
           <Logo />
-          <br />
-          <Input
-            id="Input"
-            description="Ingresa tú codigo" />
-          <br />
-          <ButtonLink
-            title="Entrar"
-            id="Btn Entrar"
-            pageto="Pedidos"/>
-          <br />
+          <div className="contenedorPaginaMesero">
+            <Input
+              id="Input"
+              description="Ingresa tú codigo" />
+            <ButtonLink
+              title="Entrar"
+              id="Btn Entrar"
+              pageto="Pedidos"/>
+          </div>
         </div>
       </div>
     );
   }   
   
   export default Mesero; 
+
 
 

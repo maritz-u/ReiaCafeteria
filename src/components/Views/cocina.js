@@ -1,12 +1,24 @@
 import React from 'react';
 import Logo from '../Elements/Logo.js';
-import ContainerCocina from '../Elements/Container.js';
 
-const Cocina = () => { 
+const Cocina = () => {
     return (
         <div>
-            <Logo/>
-            <ContainerCocina />
+            <Logo />
+            <div className="contenedorCocina">
+                <div className="half">
+                    <button className="botonEntrega">Entregar</button>
+                </div>
+                <div className="half">
+                    <button className="botonEntrega">Entregar</button>
+                </div>
+                <div className="half">
+                    <button className="botonEntrega">Entregar</button>
+                </div>
+                <div className="half">
+                    <button className="botonEntrega">Entregar</button>
+                </div>
+            </div>
         </div>
     )
 }

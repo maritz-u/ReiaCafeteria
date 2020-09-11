@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import db from '../../firebase.js';
 import { Link } from 'react-router-dom';
 
-/* Constante global para creación de pedido */ 
+/* Constante global para creación de pedido */
 const initialOrder = [];
 /* Constante global para cliente y mesa de pedido */
 const initialTable = [];
@@ -54,30 +54,25 @@ const Pedidos = () => {
   /* Constante para que cuando aprieten un link del navbar aparezca información */
   /* Estado de selecciones vacios, setOpciones es la función que va a pushear a opciones */
   const [opciones, setOpciones] = useState([]);
-  
+
   /* Constante que se va a crear para manejar el pedido*/
   const [order, setOrder] = useState([]);
+
   /* Para manejar click de cada opción */
-  const handleClick = (e) => {
-    console.log(e.target.name);
-    // console.log(e.target.value);
-    const orderName = e.target.name;
-    const orderValue = e.target.value;
-    // console.log(orderName);
-    // console.log(orderValue);
-   initialOrder.push({"name" : orderName, "value" : orderValue});
+  const handleClick = (nombre, valor) => {
+    initialOrder.push({ "name": nombre, "value": valor });
     setOrder(initialOrder);
     console.log(order);
   };
 
   /* Constante que se va a crear para manejar la mesa y el nombre del cliente */
-    const [table, setTable] = useState([]);
-/* Para obtener información de los input */
-  const inputMesa = (e) =>{
+  const [table, setTable] = useState([]);
+  /* Para obtener información de los input */
+  const inputMesa = (e) => {
     // console.log(e.target.value);
     const numberMesa = e.target.value;
     // console.log(clienteMesa);
-    initialTable.push({"mesa":numberMesa});
+    initialTable.push({ "mesa": numberMesa });
     setTable(initialTable);
     console.log(table);
   }
@@ -92,17 +87,17 @@ const Pedidos = () => {
       nombre.push(data.name);
       precio.push(data.value);
     });
-    
+
     db.collection('pedido').add({
       name: nombre,
       precio: precio,
     })
-    .then((docRef) =>{
-      console.log('nuevo pedido agregado')
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+      .then((docRef) => {
+        console.log('nuevo pedido agregado')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   };
 
 
@@ -120,46 +115,45 @@ const Pedidos = () => {
       </div>
       <div className="BoxContainer">
         <div className="menuBox">
-          {opciones.map((data, index) => {
-            return <div key={index}>
-              <button className="btnoption" onClick={handleClick} name={data.nombre} value={data.valor}>{data.nombre}</button>
-              <p>{data.valor}</p>
-            </div>
-          })}
+          <table>
+            <tbody>
+              {opciones.map((data, index) => {
+                return <tr key={index} onClick={() => handleClick(data.nombre, data.valor)}>
+                  <td>{data.nombre}</td>
+                  <td>${data.valor}</td>
+                </tr>
+              })}
+            </tbody>
+          </table>
         </div>
         <div className="pedidoBox">
           {order.map((data, index) => {
             return <div key={index}>
-                <p>{data.name}</p>
+              <p>{data.name}</p>
               <p>{data.value}</p>
             </div>
           })}
 
-        <button>+</button> <button>-</button>
+          <div className="lineaInformacionPedido">
+            <button className="aumentarPedido">+</button><div className="numeroPedido"></div><button className="disminuirPedido">-</button>
+          </div>
+          <p className="total">Total $</p>
         </div>
       </div>
 
       <div className="BoxContainer">
         <div className="ColumnContainer">
-          <div className="Total">
-            <p>Total</p> <p>$1.500</p>
-          </div>
           <div className="inputContainer">
-          <Input
-            id="Mesa"
-            description="Número Mesa"
-            onChange={inputMesa} />
             <Input
-            id="Cliente"
-            description="Nombre Cliente"
-            // onChange={handleInput} 
-            />
-            <input type="number" name="" id=""/>
-            
-          </div>hnnnnjghb
+              id="Mesa"
+              description="Número Mesa"
+              onChange={inputMesa} />
+          </div>
         </div>
-        <div className="Botonbox">
-          <Link to="Cocina" className="Link" id="order" title="Ordenar"  onClick={()=>addOrder()}>Ordenar</Link> 
+        <div className="ColumnContainer">
+          <div className="Botonbox">
+            <Link to="Cocina" className="Link" id="order" title="Ordenar" onClick={() => addOrder()}>Ordenar</Link>
+          </div>
         </div>
       </div>
     </div>
