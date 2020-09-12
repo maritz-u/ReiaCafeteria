@@ -100,7 +100,8 @@ const Pedidos = () => {
       precio: precio,
     })
       .then((docRef) => {
-        console.log('nuevo pedido agregado')
+        console.log('nuevo pedido agregado' + docRef.id);
+        // console.log(docRef);
       })
       .catch((error) => {
         console.log(error)
