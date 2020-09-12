@@ -15,27 +15,52 @@ const ContainerCocina = () => {
                 // console.log(productos);
                 cocinaOrder.push({ "mesa": mesa, "productos": productos });
                 setCocina(cocinaOrder);
-                // console.log(cocina);
+                console.log(cocina);
             });     
         });
     };
     getOrder();
+
+    // const pedidoCocina = cocina;
+    // const arrayPedidoCocina= Array.from(pedidoCocina);
+
+    // const mesa= arrayPedidoCocina.filter(function (arrayPedidoCocina) {
+    //         return arrayPedidoCocina.mesa === "mesa";
+    // });
+    // console.log(mesa);
+
+
    
     return (
         <div className="kitchen box">
             <div className="half">
-                {[cocina].map((data,index) =>{
-                    console.log(data,index);
-                    return <div key={index}>
-                        <p>
-                            {data.mesa}
-                        </p>
-                    <p>
-                        {data.productos}
-                    </p>
-
+                {cocina.map(({mesa,productos})=>{
+                    return <div key={mesa}>
+                        <p>{mesa}</p>
+                        <p>{productos}</p>
                     </div>
-                })};
+                })}
+                {/* {mesa.map((data,index)=>
+                console.log(data,index) )} */}
+                {/* {[cocina].map((data) =>{
+                    console.log(data);
+                    // console.log("Estos son los productos" + productos);
+                    // console.log(index);
+                    // console.log(data);
+                    
+                    // {[data].map((mesa) =>{
+                    //     console.log(mesa)
+                    // })}
+                    // return <div key={index}>
+                    //     <p>
+                    //         {data.mesa}
+                    //     </p>
+                    // <p>
+                    //     {data.productos}
+                    // </p>
+
+                    // </div>
+                })}; */}
                     <button className="botonEntrega">Entregar</button>
                 </div>
         </div>
