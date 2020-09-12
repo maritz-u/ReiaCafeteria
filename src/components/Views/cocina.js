@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import db from '../../firebase.js';
 import Logo from '../Elements/Logo.js';
-import ContainerCocina from '../Elements/Container.js';
+// import ContainerCocina from '../Elements/Container.js';
 
 const cocinaOrder = [];
 
@@ -18,11 +18,10 @@ const Cocina = () => {
                 let productos = doc.data().name;
                 // console.log(id, mesa, productos);
                 cocinaOrder.push({id,mesa,productos});
-               
             });
             
             setCocina(cocinaOrder);
-            // console.log(cocina);
+            console.log(cocina);
         });
     };
     // getOrder();
@@ -34,7 +33,6 @@ const Cocina = () => {
         <div>
             <Logo />
             <div className="contenedorCocina">
-                <ContainerCocina/>
                     {cocina.map(({ mesa, productos, id }) => {
                     // console.log(mesa,productos,id);
                     return <div className="half" key={id}>
