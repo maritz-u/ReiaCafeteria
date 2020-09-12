@@ -8,22 +8,7 @@ const Cocina = () => {
             <Logo />
             <div className="contenedorCocina">
                  <ContainerCocina />
-                 {/* <ContainerCocina />
-                 <ContainerCocina />
-                 <ContainerCocina /> */}
-                {/* <div className="half">
-                    <ContainerCocina />
-                    <button className="botonEntrega">Entregar</button>
-                </div>
-                <div className="half">
-                    <button className="botonEntrega">Entregar</button>
-                </div>
-                <div className="half">
-                    <button className="botonEntrega">Entregar</button>
-                </div>
-                <div className="half">
-                    <button className="botonEntrega">Entregar</button>
-                </div> */}
+        
             </div>
         </div>
     )
