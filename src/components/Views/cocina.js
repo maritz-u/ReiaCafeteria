@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import db from '../../firebase.js';
 import Logo from '../Elements/Logo.js';
-// import ContainerCocina from '../Elements/Container.js';
+
 
 const cocinaOrder = [];
 
 const Cocina = () => {
-
+    
     const [cocina, setCocina] = useState([]);
     const getOrderTable = () => {
         db.collection('pedido').onSnapshot((querySnapshot) => {
