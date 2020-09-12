@@ -7,16 +7,18 @@ const ContainerCocina = () => {
 
     const [cocina, setCocina] = useState([]);
     const getOrder = () => {
-         db.collection('pedido').onSnapshot((querySnapshot) =>{
+        db.collection('pedido').onSnapshot((querySnapshot) => {
             querySnapshot.forEach(doc => {
+                // let idPedido= doc
+                // // console.log(idPedido);
                 let mesa = doc.data().mesa[2];
                 // console.log(mesa);
                 let productos = doc.data().name;
                 // console.log(productos);
-                cocinaOrder.push({ "mesa": mesa, "productos": productos });
+                cocinaOrder.push({ "mesa": mesa, "productos": productos});
                 setCocina(cocinaOrder);
-                console.log(cocina);
-            });     
+                // console.log(cocina);
+            });
         });
     };
     getOrder();
@@ -29,40 +31,23 @@ const ContainerCocina = () => {
     // });
     // console.log(mesa);
 
-
-   
     return (
         <div className="kitchen box">
             <div className="half">
-                {cocina.map(({mesa,productos})=>{
-                    return <div key={mesa}>
-                        <p>{mesa}</p>
-                        <p>{productos}</p>
+                {cocina.map(({ mesa, productos, index }) => {
+                    // console.log(mesa,productos,index);
+                    return <div key={index}>
+                        <h4>{mesa}</h4>
+                        {productos.map((data, i) => {
+                            return <div key={i}>
+                                <p>{data}</p>
+                            </div>
+                        })}
                     </div>
-                })}
-                {/* {mesa.map((data,index)=>
-                console.log(data,index) )} */}
-                {/* {[cocina].map((data) =>{
-                    console.log(data);
-                    // console.log("Estos son los productos" + productos);
-                    // console.log(index);
-                    // console.log(data);
-                    
-                    // {[data].map((mesa) =>{
-                    //     console.log(mesa)
-                    // })}
-                    // return <div key={index}>
-                    //     <p>
-                    //         {data.mesa}
-                    //     </p>
-                    // <p>
-                    //     {data.productos}
-                    // </p>
+                })};
 
-                    // </div>
-                })}; */}
                     <button className="botonEntrega">Entregar</button>
-                </div>
+            </div>
         </div>
 
     )
