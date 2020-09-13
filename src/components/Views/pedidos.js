@@ -4,6 +4,7 @@ import Input from '../Elements/Input.js';
 import React, { useEffect, useState } from "react";
 import db from '../../firebase.js';
 import { Link } from 'react-router-dom';
+import { act } from 'react-dom/test-utils';
 
 /* Constante global para creación de pedido */
 const initialOrder = [];
@@ -60,8 +61,8 @@ const Pedidos = () => {
   /* Constante que se va a crear para manejar el pedido*/
   const [order, setOrder] = useState([]);
   /* Para tener monto total del pedido */
-  const [total, setTotal] = useState();
-  
+  const [total, setTotal] = useState([]);
+
   /* Para manejar click de cada opción */
   const handleClick = (nombre, valor) => {
     initialOrder.push({ "name": nombre, "value": valor });
@@ -84,7 +85,8 @@ const Pedidos = () => {
     initialTable.push(numberMesa);
     setTable(initialTable);
     console.log(table);
-  };
+  }
+
 
   /* Para agregar colección a firebase */
   const addOrder = () => {
@@ -114,7 +116,6 @@ const Pedidos = () => {
       })
   };
 
-  
 
   return (
     <div className="Orders">
@@ -151,12 +152,11 @@ const Pedidos = () => {
           {/* <div className="lineaInformacionPedido">
             <button className="aumentarPedido">+</button><div className="numeroPedido"></div><button className="disminuirPedido">-</button>
           </div> */}
-          <p className="total">Total $ {initialTotal.map((data) =>{
-            return data.value ++
-          })}
-          </p>
-        </div>
-      </div>
+          <p className="total">Total $ 
+          {initialTotal.reduce((acc, data) => {
+          return acc + data.value}, 0)} </p>
+         </div>
+         </div>
 
       <div className="BoxContainer">
         <div className="ColumnContainer">
