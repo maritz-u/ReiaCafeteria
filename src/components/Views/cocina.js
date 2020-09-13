@@ -29,6 +29,12 @@ const Cocina = () => {
         getOrderTable();
     }, []);
 
+    const handleSubmit= (e) =>{
+        console.log('estoy escuchando');
+        return alert('Pedido Entregado!'); 
+    }
+
+
     return (
         <div>
             <Logo />
@@ -36,14 +42,14 @@ const Cocina = () => {
                     {cocina.map(({ mesa, productos, id }) => {
                     // console.log(mesa,productos,id);
                     return <div className="half" key={id}>
-                        <h4>{mesa}</h4>
+                        <h4>Mesa: {mesa}</h4>
                         {productos.map((data, i) => {
                             return <div key={i}>
                                 <p>{data}</p>
                             </div>
                         })}
                         <br/>
-                        <button className="botonEntrega">Entregar</button>
+                        <button className="botonEntrega" onClick= {handleSubmit} value="Entregar" >Entregar</button>
                     </div>
                 })};
             </div>
