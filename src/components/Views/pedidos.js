@@ -4,11 +4,14 @@ import Input from '../Elements/Input.js';
 import React, { useEffect, useState } from "react";
 import db from '../../firebase.js';
 import { Link } from 'react-router-dom';
+import { act } from 'react-dom/test-utils';
 
 /* Constante global para creación de pedido */
 const initialOrder = [];
 /* Constante global para cliente y mesa de pedido */
 const initialTable = [];
+/* Constante global para cliente y mesa de pedido */
+const initialTotal = [];
 
 const Pedidos = () => {
 
@@ -57,12 +60,17 @@ const Pedidos = () => {
 
   /* Constante que se va a crear para manejar el pedido*/
   const [order, setOrder] = useState([]);
+  /* Para tener monto total del pedido */
+  const [total, setTotal] = useState([]);
 
   /* Para manejar click de cada opción */
   const handleClick = (nombre, valor) => {
     initialOrder.push({ "name": nombre, "value": valor });
     setOrder(initialOrder);
     console.log(order);
+    initialTotal.push({'value': valor ++});
+    setTotal(initialTotal);
+    console.log(initialTotal);
   };
 
   /* Constante que se va a crear para manejar la mesa y el nombre del cliente */
@@ -100,7 +108,8 @@ const Pedidos = () => {
       precio: precio,
     })
       .then((docRef) => {
-        console.log('nuevo pedido agregado')
+        console.log('nuevo pedido agregado' + docRef.id);
+        // console.log(docRef);
       })
       .catch((error) => {
         console.log(error)
@@ -143,9 +152,11 @@ const Pedidos = () => {
           {/* <div className="lineaInformacionPedido">
             <button className="aumentarPedido">+</button><div className="numeroPedido"></div><button className="disminuirPedido">-</button>
           </div> */}
-          <p className="total">Total $</p>
-        </div>
-      </div>
+          <p className="total">Total $ 
+          {initialTotal.reduce((acc, data) => {
+          return acc + data.value}, 0)} </p>
+         </div>
+         </div>
 
       <div className="BoxContainer">
         <div className="ColumnContainer">
