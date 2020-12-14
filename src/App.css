@@ -16,6 +16,7 @@ p,h4 {
 
 .BigContainer {
     background-image: url(./images/flores\ sin\ fondo.png);
+    background-size: contain;
 
 }
 
