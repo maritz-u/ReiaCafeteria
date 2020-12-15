@@ -1,4 +1,3 @@
-
 ![LogoReia](./src/images/LogoReia.png)
 
 ##### [Link para pagina web ]( https://cafeteriareia-6c8ba.web.app/)
@@ -10,7 +9,6 @@
     - [**Diseño**](#diseño)
   - [**Feedback**](#feedback)
     - [**Página web finalizada**](#página-web-finalizada)
-
 # **Resumen del proyecto**
 
 Desafío: Una Cafetería necesita una interfaz en la que se puedan tomar pedidos usando una tablet, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
@@ -27,13 +25,11 @@ Empezamos a planificar todo lo que seria necesario para el desarrollo de la pág
 Basado en ideas de las desarrolladoras, creamos nuestro diagrama de flujo, hecho en papel y lápiz
 
 
-
 ## **Feedback**
 
 De acuerdo con los feedbacks recibidos:
 
 - Mejorar el código, optimizandolo con la librería React.
-
 
 ### **Página web finalizada**
 
@@ -42,4 +38,3 @@ De acuerdo con los feedbacks recibidos:
 ![Opción de ingreso cocina] https://cafeteriareia-6c8ba.web.app/Cocina
 ![Pedidos garzón] https://cafeteriareia-6c8ba.web.app/Pedidos
 ![Ordenes cocina] https://cafeteriareia-6c8ba.web.app/Cocina
-
