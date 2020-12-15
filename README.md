@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+![LogoReia](./src/images/LogoReia.png)
 
-In the project directory, you can run:
+##### [Link para pagina web ]( https://cafeteriareia-6c8ba.web.app/)
+## **Índice**
 
-### `npm start`
+- [**Resumen del proyecto**](#resumen-del-proyecto)
+  - [**Resumen del producto**](#resumen-del-producto)
+    - [**Planificación**](#planificación)
+    - [**Diseño**](#diseño)
+  - [**Feedback**](#feedback)
+    - [**Página web finalizada**](#página-web-finalizada)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# **Resumen del proyecto**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Desafío: Una Cafetería necesita una interfaz en la que se puedan tomar pedidos usando una tablet, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
-### `npm test`
+## **Resumen del producto**
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Desarrollado con React.js, el proyecto tiene meta principal optimizar el tiempo entre garzones y cocineros, enfocandose en la rápidez con la cual tienen que actuar al momento de  recibir los pedidos. Nuestra página fue pensada para que sea lo más intuitivo posible su uso y no complicar la interacción entre usuarios/trabajadores.
 
-### `npm run build`
+### **Planificación**
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Empezamos a planificar todo lo que seria necesario para el desarrollo de la página web utilizando el Trello, donde nos permitió una mejor visualización de todas las etapas necesarias, y dividimos las tareas por sprint.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### **Diseño**
+Basado en ideas de las desarrolladoras, creamos nuestro diagrama de flujo, hecho en papel y lápiz
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## **Feedback**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+De acuerdo con los feedbacks recibidos:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Mejorar el código, optimizandolo con la librería React.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### **Página web finalizada**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Página de inicio] https://cafeteriareia-6c8ba.web.app/
+![Opción de ingreso mesero] https://cafeteriareia-6c8ba.web.app/Mesero
+![Opción de ingreso cocina] https://cafeteriareia-6c8ba.web.app/Cocina
+![Pedidos garzón] https://cafeteriareia-6c8ba.web.app/Pedidos
+![Ordenes cocina] https://cafeteriareia-6c8ba.web.app/Cocina
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
